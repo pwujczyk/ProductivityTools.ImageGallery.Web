@@ -22,8 +22,10 @@ function Gallery() {
 
     const getLinks = () => {
 
+        let x= window.innerHeight;
+        console.log(x);
         console.log("get from endpoint");
-        fetch(`https://localhost:5001/api/Images/List`, {
+        fetch(`https://localhost:5001/api/Images/List?height=`+x, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -38,7 +40,7 @@ function Gallery() {
     return (
         <div>
             <button onClick={handleClick}>zrob</button>
-            <ImageGallery items={serverImages} />
+            <ImageGallery lazyLoad items={serverImages} />
         </div>
 
     )
