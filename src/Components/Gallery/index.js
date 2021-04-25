@@ -18,7 +18,7 @@ const images = [
 
 function Gallery() {
 
-    const [images2, setImages] = useState();
+    const [serverImages, setserverImages] = useState([]);
 
     const getLinks = () => {
 
@@ -28,7 +28,7 @@ function Gallery() {
             headers: { 'Content-Type': 'application/json' }
         })
             .then(response => response.json())
-            .then(result => setImages(result));
+            .then(result => setserverImages(result));
     }
 
     const handleClick=function(){
@@ -38,7 +38,7 @@ function Gallery() {
     return (
         <div>
             <button onClick={handleClick}>zrob</button>
-            <ImageGallery items={images2} />
+            <ImageGallery items={serverImages} />
         </div>
 
     )
