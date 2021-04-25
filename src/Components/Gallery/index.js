@@ -34,13 +34,14 @@ function Gallery() {
     }
 
     const handleClick=function(){
+        debugger;
         getLinks();
     }
 
     return (
         <div>
             <button onClick={handleClick}>zrob</button>
-            <ImageGallery lazyLoad items={serverImages} />
+            <ImageGallery items={serverImages} />
         </div>
 
     )
