@@ -34,7 +34,6 @@ function Gallery() {
     }
 
     const handleClick=function(){
-        debugger;
         getLinks();
     }
 
